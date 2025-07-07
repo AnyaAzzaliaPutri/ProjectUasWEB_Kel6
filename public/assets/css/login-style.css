@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(-45deg, #764ba2, #667eea);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    z-index: 1;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #666;
+    outline: none;
+    background: transparent;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #666;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: #764ba2;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #764ba2;
+    font-size: 18px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #764ba2;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #5a3f91;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+/* ===== BUBBLE ANIMATION ==== */
+
+.background-bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background-bubbles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: bubble 25s linear infinite;
+    bottom: -150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    filter: blur(1px);
+    mix-blend-mode: screen;
+}
+
+/* Individual bubble settings */
+.background-bubbles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 22s;
+}
+.background-bubbles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+.background-bubbles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.background-bubbles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+.background-bubbles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.background-bubbles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+.background-bubbles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+.background-bubbles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+.background-bubbles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+.background-bubbles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.4;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
